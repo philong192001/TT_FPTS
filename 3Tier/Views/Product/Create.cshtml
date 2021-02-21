@@ -1,0 +1,55 @@
+﻿@model DAL.Models.Product
+@{
+    ViewData["Title"] = "Create";
+}
+<h2>Create Customers </h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">       
+            <div class="form-group">
+                <label class="control-label">Name</label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Price</label>
+                <input asp-for="Price"class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Quantity</label>
+                <input asp-for="Quantity" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">ID_Brands</label>
+                <select asp-for="Id_brands">
+                    @foreach (var item in ViewBag.listBrand)
+                    {
+                        <option name="@item.id" value="@item.id">@item.name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">ID_Categories</label>
+                <select asp-for="Id_categories">
+                    @foreach (var item in ViewBag.listCate)
+                    {
+                        <option name="@item.id" value="@item.id">@item.name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Created_Date</label>
+                <input asp-for="Created_Date" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}   
