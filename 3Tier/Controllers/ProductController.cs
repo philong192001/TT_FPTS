@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
+using BLL;
 using DAL;
 using DAL.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -12,35 +14,24 @@ namespace _3Tier.Controllers
 {
     public class ProductController : Controller
     {
-        ConnectDB dB = new ConnectDB();
+        private readonly ProductBLL _dB;      
+        public ProductController(ProductBLL db)
+        {
+            _dB = db;
+           
+        }         
         public IActionResult Index()
         {
             List<Product> products = new List<Product>();
-            products = dB.GetAllProduct().ToList();
+            products = _dB.GetAllProduct().ToList();
             return View(products);
         }
         public IActionResult Create()
-        {       
-            List<Brand> list_brand = new List<Brand>();
-            DataSet ds1 = dB.SelectBrand();
-            foreach (DataRow dr in ds1.Tables[0].Rows)
-            {
-                Brand brand = new Brand();
-                brand.id = Convert.ToInt32(dr["id"]);
-                brand.name = dr["name"].ToString();
-                list_brand.Add(brand);
-            }
-            ViewBag.listBrand = list_brand;
-            List<Category> list_categories = new List<Category>();
-            DataSet ds2 = dB.SelectCate();
-            foreach (DataRow dr in ds2.Tables[0].Rows)
-            {
-                Category category = new Category();
-                category.id = Convert.ToInt32(dr["id"]);
-                category.name = dr["name"].ToString();
-                list_categories.Add(category);
-            }
-            ViewBag.listCate = list_categories;
+        {
+            var listCate = _dB.AllCategory();
+            var listBrand = _dB.AllBrand();          
+            ViewBag.listBrand = listBrand;           
+            ViewBag.listCate = listCate;
             return View();
         }
         [HttpPost]
@@ -49,7 +40,7 @@ namespace _3Tier.Controllers
         {
             if (ModelState.IsValid)
             {
-               dB.AddProduct(product);
+                _dB.AddProduct(product);
                 return RedirectToAction("Index");
             }
             return View(product);
@@ -60,35 +51,19 @@ namespace _3Tier.Controllers
             {
                 return NotFound();
             }
-           
-            Product product = dB.GetProductById(id);
-            List<Brand> list_brand = new List<Brand>();
-            DataSet ds1 = dB.SelectBrand();
-            foreach (DataRow dr in ds1.Tables[0].Rows)
-            {
-                Brand brand = new Brand();
-                brand.id = Convert.ToInt32(dr["id"]);
-                brand.name = dr["name"].ToString();
-                list_brand.Add(brand);
-            }
-            List<Category> list_categories = new List<Category>();
-            DataSet ds2 = dB.SelectCate();
-            foreach (DataRow dr in ds2.Tables[0].Rows)
-            {
-                Category category = new Category();
-                category.id = Convert.ToInt32(dr["id"]);
-                category.name = dr["name"].ToString();
-                list_categories.Add(category);
-            }
+            Product product = _dB.GetProductById(id);
+            var listCate = _dB.AllCategory();
+            var listBrand = _dB.AllBrand();
             dynamic data = new ExpandoObject();
             data.product = product;
-            data.list_brand = list_brand;
-            data.list_categories = list_categories;
+            data.list_brand = listBrand;
+            data.list_categories = listCate;
             if (product == null)
             {
                 return NotFound();
             }
-            return View(data);
+            //return View(data);
+            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -100,10 +75,10 @@ namespace _3Tier.Controllers
             }
             if (ModelState.IsValid)
             {
-                dB.UpdateProduct(product);
+                _dB.UpdateProduct(product);
                 return RedirectToAction("Index");
             }
-            return View(dB);
+            return View(_dB);
         }
         public IActionResult Details(int? id)
         {
@@ -111,7 +86,7 @@ namespace _3Tier.Controllers
             {
                 return NotFound();
             }
-            Product product = dB.GetProductById(id);
+            Product product = _dB.GetProductById(id);
 
             if (product == null)
             {
@@ -119,13 +94,13 @@ namespace _3Tier.Controllers
             }
             return View(product);
         }
-        public IActionResult Delete(int? id )
+        public IActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-            Product product = dB.GetProductById(id);
+            Product product = _dB.GetProductById(id);
 
             if (product == null)
             {
@@ -137,7 +112,7 @@ namespace _3Tier.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int? id)
         {
-            dB.DeleteProduct(id);
+            _dB.DeleteProduct(id);
             return RedirectToAction("Index");
         }
     }

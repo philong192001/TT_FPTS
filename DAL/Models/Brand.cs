@@ -6,7 +6,7 @@ namespace DAL.Models
 {
     public class Brand
     {
-        public int id { get; set; } = 0;
+        public int id { get; set; } 
         public string name { get; set; } = "";
     }
 }

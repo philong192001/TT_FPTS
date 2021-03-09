@@ -48,6 +48,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -96,7 +102,11 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\FPTS\\3_Tier\\DAL\\DAL.csproj": {
+                "projectPath": "E:\\FPTS\\3_Tier\\DAL\\DAL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -109,6 +119,10 @@
         "netstandard2.0": {
           "dependencies": {
             "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[5.0.0, )"
             },
@@ -176,6 +190,10 @@
         "netstandard2.0": {
           "dependencies": {
             "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[5.0.0, )"
             },

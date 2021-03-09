@@ -24,8 +24,6 @@ E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\DAL.pdb
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.csprojAssemblyReference.cache
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.AssemblyInfoInputs.cache
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.AssemblyInfo.cs
-E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.csproj.CoreCompileInputs.cache
-E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.MvcApplicationPartsAssemblyInfo.cache
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.RazorAssemblyInfo.cache
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.RazorAssemblyInfo.cs
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.TagHelpers.input.cache
@@ -53,3 +51,16 @@ E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Product\Delete.cshtml.g
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Product\Details.cshtml.g.cs
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
 E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.csproj.CoreCompileInputs.cache
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.MvcApplicationPartsAssemblyInfo.cache
+E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Brand\Index.cshtml.g.cs
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Brand\Create.cshtml.g.cs
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Brand\Delete.cshtml.g.cs
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Brand\Details.cshtml.g.cs
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Brand\Edit.cshtml.g.cs
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Category\Create.cshtml.g.cs
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Category\Delete.cshtml.g.cs
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Category\Details.cshtml.g.cs
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs

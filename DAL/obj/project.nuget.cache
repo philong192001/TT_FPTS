@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yWpbWxFo+kkEHWN6KxnhGtVevjrga716XiF8OeHSX/IvHm+RXNveok5ljgfYY4G4WkZJzNZCzlElOYn+qn0Nfg==",
+  "dgSpecHash": "GecuCKmzbOBpyVcbX79ZUV+FUBJC+eM/zZKuriE5PXOw78YfkcsYbDy+tBAjiou5Nq+FYgwWWkzyaDxNGm+TdA==",
   "success": true,
   "projectFilePath": "E:\\FPTS\\3_Tier\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

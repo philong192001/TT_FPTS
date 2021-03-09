@@ -1,0 +1,10 @@
+﻿<script>
+    fetch('https://localhost:44393/api/Category/Index')
+        .then(res => res.json())
+        .then(res => {
+            res.data.map(brand => {
+                console.log(`${brand.id}: ${brand.name}`);
+            });
+        });
+</script>
+<h1>aqe</h1>

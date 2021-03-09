@@ -6,27 +6,27 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" method="post">
             @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" value="@Model.product.Id" />*@
             <div class="form-group">
                 <label class="control-label">Name</label>
-                <input value="@Model.product.Name" class="form-control" />
+                <input value="@Model.product.Name" name="Name" class="form-control" />
                 @*<span value="@Model.product.name" class="text-danger"></span>*@
             </div>
             <div class="form-group">
                 <label class="control-label">Price</label>
-                <input value="@Model.product.Price" class="form-control" />
+                <input value="@Model.product.Price" name="Price" class="form-control" />
                 @*<span value="@Model.product.price" class="text-danger"></span>*@
             </div>        
             <div class="form-group">
                 <label class="control-label">Quantity</label>
-                <input value="@Model.product.Quantity" class="form-control" />
+                <input value="@Model.product.Quantity" name="Quantity" class="form-control" />
                 @*<span value="@Model.product.quantity" class="text-danger"></span>*@
             </div>
             <div class="form-group">
                 <label class="control-label">ID_Brands</label>
-                <select>
+                <select name="Id_brands">
                     @foreach (var item in Model.list_brand)
                     {
                         if (Model.product.Id_brands == item.id)
@@ -44,7 +44,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label">ID_Categories</label>
-                <select>
+                <select name="Id_categories">
                     @foreach (var item in Model.list_categories)
                     {
                         if (Model.product.Id_categories == item.id)
@@ -61,7 +61,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Created_Date</label>
-                <input value="@Model.product.Created_Date" class="form-control" />
+                <input value="@Model.product.Created_Date" name="Created_Date" class="form-control" />
                 @*<span value="@Model.product.CreatedAt" class="text-danger"></span>*@
             </div>
             <div class="form-group">

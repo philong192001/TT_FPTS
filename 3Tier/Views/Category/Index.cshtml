@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DAL.Models.Category>
+<html>
+<body>
+    <h2>Index</h2>
+    <p>
+        <a href="/Category/Create">Create New</a>
+    </p>
+    <table class="table table-sm ">
+        <thead>
+            <tr>
+                <th class="table-active" scope="col">#</th>
+                <th class="table-active" scope="col">Name</th>
+                <th class="table-active" scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="table-active">@item.id</td>
+                    <td class="table-active">@item.name</td>
+                    <td class="table-active">
+                        <a href="/Category/Edit/@item.id">Edit</a>
+                        <a href="/Category/Details/@item.id">Details</a>
+                        <a href="/Category/Delete/@item.id">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</body>
+</html>

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +25,15 @@ namespace _3Tier
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSingleton<DAL.ConnectDB>();
+            services.AddSingleton<DAL.BrandDAL>();
+            services.AddSingleton<DAL.CategoryDAL>();
+            services.AddSingleton<BLL.ProductBLL>();
+            services.AddSingleton<BLL.BrandBLL>();
+            services.AddSingleton<BLL.CategoryBLL>();
+            //services.AddSingleton<ISettings, ConnectDB>();     
+            //services.Configure<BootstrapConfig>(Configuration.GetSection("DB_3Tier"));
+            services.AddOptions();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
