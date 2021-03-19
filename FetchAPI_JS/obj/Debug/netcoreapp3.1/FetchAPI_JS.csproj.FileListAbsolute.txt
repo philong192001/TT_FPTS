@@ -9,7 +9,6 @@ E:\FPTS\3_Tier\FetchAPI_JS\bin\Debug\netcoreapp3.1\FetchAPI_JS.dll
 E:\FPTS\3_Tier\FetchAPI_JS\bin\Debug\netcoreapp3.1\FetchAPI_JS.pdb
 E:\FPTS\3_Tier\FetchAPI_JS\bin\Debug\netcoreapp3.1\FetchAPI_JS.Views.dll
 E:\FPTS\3_Tier\FetchAPI_JS\bin\Debug\netcoreapp3.1\FetchAPI_JS.Views.pdb
-E:\FPTS\3_Tier\FetchAPI_JS\obj\Debug\netcoreapp3.1\FetchAPI_JS.csprojAssemblyReference.cache
 E:\FPTS\3_Tier\FetchAPI_JS\obj\Debug\netcoreapp3.1\FetchAPI_JS.AssemblyInfoInputs.cache
 E:\FPTS\3_Tier\FetchAPI_JS\obj\Debug\netcoreapp3.1\FetchAPI_JS.AssemblyInfo.cs
 E:\FPTS\3_Tier\FetchAPI_JS\obj\Debug\netcoreapp3.1\FetchAPI_JS.csproj.CoreCompileInputs.cache

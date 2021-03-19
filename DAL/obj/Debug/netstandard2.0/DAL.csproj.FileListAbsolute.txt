@@ -5,5 +5,4 @@ E:\FPTS\3_Tier\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
 E:\FPTS\3_Tier\DAL\bin\Debug\netstandard2.0\DAL.pdb
 E:\FPTS\3_Tier\DAL\obj\Debug\netstandard2.0\DAL.dll
 E:\FPTS\3_Tier\DAL\obj\Debug\netstandard2.0\DAL.pdb
-E:\FPTS\3_Tier\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
 E:\FPTS\3_Tier\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache

@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FetchAPI_JS", "FetchAPI_JS\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetAPI_JS", "GetAPI_JS\GetAPI_JS.csproj", "{CA34532B-B4C7-4ADA-9F2B-1A00CEE10536}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo_Signlr", "Demo_Signlr\Demo_Signlr.csproj", "{944FEE12-0AAC-4A1B-B1D3-8442D8E77439}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo_Signlr", "Demo_Signlr\Demo_Signlr.csproj", "{944FEE12-0AAC-4A1B-B1D3-8442D8E77439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWT_API", "JWT_API\JWT_API.csproj", "{DDAFA7F5-D773-4ECB-944B-AD7AEB7EEC03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{944FEE12-0AAC-4A1B-B1D3-8442D8E77439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{944FEE12-0AAC-4A1B-B1D3-8442D8E77439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{944FEE12-0AAC-4A1B-B1D3-8442D8E77439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDAFA7F5-D773-4ECB-944B-AD7AEB7EEC03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDAFA7F5-D773-4ECB-944B-AD7AEB7EEC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDAFA7F5-D773-4ECB-944B-AD7AEB7EEC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDAFA7F5-D773-4ECB-944B-AD7AEB7EEC03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
