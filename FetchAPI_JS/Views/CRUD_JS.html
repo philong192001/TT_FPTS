@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <h3>Add New Post</h3>
+                <form class="add-post-form">
+                    <div class="form-group">
+                        <label for="title">Name</label>
+                        <input type="text" class="form-group" id="name-value" />
+                    </div>
+                    <div class="form-group">
+                        <label for="body">ID</label>
+                        <input type="text" class="form-group" id="id-value" readonly/>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Post</button>
+                </form>
+            </div>
+        </div>
+        <div class="posts-list row">
+            <div class="card mt-4 col-md-6 bg-ligt">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Edit</a>
+                    <a href="#" class="card-link">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //var cors = require('cors')
+        const postlist = document.querySelector('.posts-list');
+        const addPostForm = document.querySelector('.add-post-form');
+        const nameValue = document.getElementById('name-value');
+        const idValue = document.getElementById('id-value');
+        const btnSubmit = document.querySelector('.btn')
+        let output = '';
+        //app.use(cors());
+        const renderPosts = (posts) => {
+            posts.forEach(post => {
+                output += `
+                        <div class="card mt-4 col-md-6 bg-ligt">
+                            <div class="card-body" data-id=${post.id}>
+                                <h5 class="card-title">${post.name}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">${post.id}</h6>
+                                <h7 class="card-text">${post.created_Date}</h7>
+                                <p class="card-text">${post.quantity}</p>
+                                <a href="#" class="card-link" id="Update">Edit</a>
+                                <a href="#" class="card-link" id="Delete">Delete</a>
+                            </div>
+                        </div>
+                    `
+                console.log(post)
+            });
+            postlist.innerHTML = output;
+        }
+        const url = 'https://localhost:44393/api/Brand';
+        fetch(`${url}/GetAllBrand`).then(res => res.json())
+            .then(data => renderPosts(data))
+        
+        postlist.addEventListener('click', (e) => {
+            e.preventDefault();
+            let delButtonIsPressed = e.target.id == 'Delete';
+            let editButtonIsPressed = e.target.id == 'Update';
+
+            let id = e.target.parentElement.dataset.id;
+            //Delete
+            if (delButtonIsPressed) {
+                fetch(`${url}/Delete/${id}`, {
+                    method : 'POST',
+                })
+                    .then(res => res.json())
+                    .then(() => window.location.reload())
+            }
+            //---------
+            if (editButtonIsPressed) {
+                const parent = e.target.parentElement;
+                
+                let NameContent = parent.querySelector('.card-title').textContent;
+                let IdContent = parent.querySelector('.mb-2').textContent;
+                //console.log(NameContent);
+                idValue.value = IdContent;
+                nameValue.value = NameContent;
+            }
+            //Update
+            btnSubmit.addEventListener('click', (e) => {
+                e.preventDefault();
+                var a = {
+                    id: parseInt( idValue.value),
+                    name: nameValue.value
+                }
+                console.log(a);
+                fetch(`${url}/Update`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(
+                      a
+                    )
+                })
+                    .then(res => res.json())
+                    .catch(error => {
+                        console.log(error);
+                    })
+                    .then(() => location.reload())
+            })        
+        })
+        //Create
+        addPostForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            console.log(nameValue.value);
+            fetch(`${url}/Create`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({
+                    name: nameValue.value
+                })
+               
+            })
+                .then(res => res.json())
+                .then(data => {
+                    const dataObj = {};
+                    dataObj.push(data);
+                    renderPosts(dataObj);
+                })
+                .then(() => location.reload())
+                .catch(error => {
+                    console.log(error);
+                });           
+        });
+    </script>
+</body>
+</html>

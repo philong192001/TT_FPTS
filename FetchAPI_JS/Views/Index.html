@@ -22,13 +22,14 @@
 <body>
     <div id="myData"></div>
     <script>
-        fetch('https://localhost:44393/api/Product/Index', {})
+        fetch('https://dog.ceo/api/breeds/image/random', {})
             .then(function (response) {
                 return response.json();
                 console.log(response.json())
             })
             .then(function (data) {
-                appendData(data);
+                appendData(data.message);
+                //console.log(data.mastiff)
             })
             .catch(function (err) {
                 console.log('error: ' + err);
@@ -37,8 +38,10 @@
             var mainContainer = document.getElementById("myData");
             for (var i = 0; i < data.length; i++) {
                 var div = document.createElement("div");
-                div.innerHTML = 'ID: ' + data[i].id +'---'+ 'Name: ' + data[i].name;
-                mainContainer.appendChild(div);
+                div.innerHTML = 'ID: ' + data[i].id + '---' + 'Name: ' + data[i].name;
+                img.innerHTML = '<img src="' + data[i].message +'"/>';
+                //mainContainer.appendChild(div);
+                mainContainer.appendChild(img);
             }
         }
     </script>

@@ -18,7 +18,7 @@ namespace API_3Tier.Controllers
         {
             _dB = db;
         }
-        public IActionResult Index()
+        public IActionResult GetAllCategory()
         {
             var category = _dB.GetCategory().ToList();
             return Ok(category);

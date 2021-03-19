@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <script>
+        var person = {
+            firstName: 'Default',
+            lastName: 'Default',
+            getFullName: function () {
+                return this.firstName + '' + this.lastName;
+            }
+        }
+        var john = {
+            firstName: 'John',
+            lastName: 'Marrisa',
+        }
+        var jane = {
+            firstName: 'Long',
+            //lastName: 'Phi',
+            age : '18'
+        }
+
+        
+
+        john.__proto__ = person;
+        jane.__proto__ = person;
+        console.log(john.getFullName());
+        console.log(john.lastName)
+        console.log(jane.getFullName());
+        for (var prop in john) {
+            if (john.hasOwnProperty(prop)){
+                console.log(prop + ' : ' + john[prop]);
+            }
+        }
+    </script>
+</body>
+</html>

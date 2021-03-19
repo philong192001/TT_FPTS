@@ -21,5 +21,7 @@ namespace DAL.Models
         public int? Id_brands { get; set; }
         [Required(ErrorMessage = "Enter Your Date")]
         public DateTime Created_Date { get; set; }
+        public string brand { get; set; } = "";
+        public string category { get; set; } = "";
     }
 }

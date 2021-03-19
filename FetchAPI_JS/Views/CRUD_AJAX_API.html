@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX API</title>
+</head>
+<body>
+    <h1>CRUD AJAX API</h1>
+    <button id="get-button">READ BRANDS</button>
+    <form id="created-form">
+
+        <input class="ValueName" type="text" id="create-input" />
+        <!--<input id="test" type="text"/>-->
+
+        <button id="submit" type="button">CREATE</button>
+    </form>
+    <hr />
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.js"></script>
+    <script>
+
+        $(function () {
+            //GET/READ
+            $('#get-button').on('click', function () {
+
+                $.ajax({
+                    url: 'https://localhost:44393/api/Brand/GetAllBrand',
+                    contentType: 'application/json',
+                    success: function (rs) {
+                        //console.log(rs)
+                        var tbodyEl = $('tbody');
+                        tbodyEl.html('');
+                        rs.forEach(function (brand) {
+                            tbodyEl.append('\
+                                    <tr>\
+                                        <td class="id">'+ brand.id + '</td>\
+                                        <td><input type="text" class="name" value="'+ brand.name + '" /></td>\
+                                        <td>\
+                                        <button class= "update-button"> UPDATE / PUT</button>\
+                                        <button class="delete-button">DELETE</button>\
+                                        </td >\
+                                    </tr >\
+                                    ');
+                        });
+                    }
+                })
+            });
+        });
+        //CREATE
+        $('#submit').on('click', function () {
+
+            var createInput = $('#create-input').val();
+
+            $.ajax({
+                url: 'https://localhost:44393/api/Brand/Create',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    name: createInput
+                }),
+                success: function (rs) {
+                    $('#get-button').click()
+                    //console.log(rs)
+                    swal({
+                        title: "Good job!",
+                        text: "You clicked the button!",
+                        icon: "success",
+                        button: "Aww yiss!",
+                    });
+                }
+            });
+        });
+        //UPDATE
+        $('table').on('click', '.update-button', function () {
+            let rowEl = $(this).closest('tr');
+            let id = rowEl.find('.id').text();
+            let newName = rowEl.find('.name').val();
+
+            $.ajax({
+                url: 'https://localhost:44393/api/Brand/Update',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    id: parseInt(id),
+                    name: newName
+                }),
+                success: function (response) {
+                    console.log(response);
+                    $('#get-button').click()
+                }
+            });
+        });
+        //DELETE
+        $('table').on('click', '.delete-button', function () {
+            let rowEl = $(this).closest('tr');
+            let id = rowEl.find('.id').text();
+            console.log(id)
+            swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this imaginary file!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        $.ajax({
+                            url: 'https://localhost:44393/api/Brand/Delete/' + id,
+                            method: 'POST',
+                            contentType: 'application/json',
+                            //data: JSON.stringify({
+                            //    id: parseInt(id)
+                            //}),
+                            success: function (rs) {
+                                console.log(rs);
+                                $('#get-button').click()
+                            }
+                        });
+                        swal("Poof! Your imaginary file has been deleted!", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Your imaginary file is safe!");
+                    }
+                });
+            
+
+        });
+
+    </script>
+</body>
+</html>

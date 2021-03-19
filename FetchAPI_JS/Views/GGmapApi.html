@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        html {
+            height: 100%
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        #map-canvas {
+            height: 100%
+        }
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEfFBY91Ha_QsGqJZxA3dW4NKi7HAdVlg&language=vi"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEfFBY91Ha_QsGqJZxA3dW4NKi7HAdVlg"></script>
+    <script>
+        // Function khởi tạo google map
+        function initialize() {
+            // Thuộc tính map tại thành phố Hồ Chí Minh
+            var mapOptions = {
+                zoom: 4,
+                center: new google.maps.LatLng(10.771971, 106.697845)
+            };
+
+            // Khởi tạo map
+            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+            // Gắn sự kiện click vào bản đồ, khi click sẽ gọi hàm placeMarker
+            // và tham số truyền vào là thông tin tung độ và vĩ độ và bản đồ đang hiển thị
+            google.maps.event.addListener(map, 'click', function (e) {
+                placeMarker(e.latLng, map);
+            });
+
+            function placeMarker(position, map) {
+                // Tạo marker
+                var marker = new google.maps.Marker({
+                    position: position,
+                    map: map
+                });
+                // Di chuyển trung tâm bản đồ tới vị trí position
+                map.panTo(position);
+            }
+
+            // Khi thay đổi vị trí của bản đồ (center_changed events)
+            // thì sẽ xử lý sau 3 giây đưa về vị trí cũ.
+            google.maps.event.addListener(map, 'center_changed', function () {
+                // marker.getPosition() là lấy vị trí trung tâm của bản đồ
+                window.setTimeout(function () {
+                    map.panTo(marker.getPosition());
+                }, 3000);
+            });
+
+            // Đưa sự kiện click vào marker vừa tạp trên
+            // sẽ zoom lên 8 và đưa bản đồ về trạng thái nằm giữa
+            google.maps.event.addListener(marker, 'click', function () {
+                map.setZoom(8);
+                map.setCenter(marker.getPosition());
+            });
+        }
+
+        // Lúc laod các thẻ DOM thì chạy hàm initialize
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+        function detectBrowser() {
+            // User Agent hiện tại
+            var useragent = navigator.userAgent;
+
+            // Div hiển thị google map
+            var mapdiv = document.getElementById("map-canvas");
+
+            // Nếu là iPhone hoặc Android thì thiết lập màn hình full 100%
+            if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1) {
+                mapdiv.style.width = '100%';
+                mapdiv.style.height = '100%';
+            } else {
+                // Ngược lại người dùng đang dùng desktop, ta thiết lập theo percent
+                mapdiv.style.width = '600px';
+                mapdiv.style.height = '800px';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="map-canvas" />
+   
+</body>
+</html>

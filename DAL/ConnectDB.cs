@@ -185,7 +185,32 @@ namespace DAL
             _sqlConnection.Close();
 
         }
-
+        public DataTable ProductJoinBrand()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                if (ConnectionState.Closed == _sqlConnection.State)
+                {
+                    _sqlConnection.Open();
+                }
+               
+                SqlCommand cmd = new SqlCommand("Sp_ProductJoinBrand", _sqlConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader rd = cmd.ExecuteReader();
+                dt.Load(rd);
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                _sqlConnection.Close();
+            }
+            return dt;
+           
+        }
 
 
 

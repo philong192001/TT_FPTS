@@ -18,9 +18,14 @@ namespace API_3Tier.Controllers
         {
             _dB = db;
         }
-        public IActionResult Index()
+        public IActionResult GetAllProduct()
         {
             var products = _dB.GetAllProduct().ToList();
+            return Ok(products);
+        }
+        public IActionResult GetProductJoin()
+        {
+            var products = _dB.GetProductFullJoin().ToList();
             return Ok(products);
         }
         [HttpGet("{id}")]

@@ -20,7 +20,7 @@ namespace API_3Tier.Controllers
             _dB = db;
         }
         
-        public IActionResult Index()
+        public IActionResult GetAllBrand()
         {
           var brands =  _dB.GetBrand().ToList();
             return Ok(brands);
@@ -31,6 +31,7 @@ namespace API_3Tier.Controllers
             return _dB.GetBrandById(id);
         }
         [HttpPost]
+        //[EnableCors("AllowAll")]
         public IActionResult Create([Bind] Brand brand)
         {
             try

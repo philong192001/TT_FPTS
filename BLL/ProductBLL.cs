@@ -60,6 +60,37 @@ namespace BLL
             }
          
         }
+        public List<Product> GetProductFullJoin()
+        {
+            try
+            {
+                Product product = new Product();
+                DataTable dt = _connectDB.ProductJoinBrand();
+                List<Product> products = new List<Product>();
+                foreach(DataRow dr in dt.Rows)
+                {
+                    products.Add(new Product
+                    {
+                        Id = Convert.ToInt32(dr["id"]),
+                        Name = string.IsNullOrEmpty(dr["name"].ToString()) ? "" : dr["name"].ToString(),
+                        Price = string.IsNullOrEmpty(dr["price"].ToString()) ? 0 : float.Parse(dr["price"].ToString()),
+                        Quantity = string.IsNullOrEmpty(dr["quantity"].ToString()) ? 0 : Convert.ToInt32(dr["quantity"]),
+                        Id_brands = string.IsNullOrEmpty(dr["id_brands"].ToString()) ? 0 : Convert.ToInt32(dr["id_brands"]),
+                        Id_categories = string.IsNullOrEmpty(dr["id_categories"].ToString()) ? 0 : Convert.ToInt32(dr["id_categories"]),
+                        brand = string.IsNullOrEmpty(dr["brand"].ToString()) ? "" : dr["brand"].ToString(),
+                        category = string.IsNullOrEmpty(dr["category"].ToString()) ? "" :dr["category"].ToString(),
+                        Created_Date = string.IsNullOrEmpty(dr["CreatedAt"].ToString()) ? DateTime.Now : DateTime.Parse(dr["CreatedAt"].ToString())
+
+                    });
+                }
+                return products;
+
+            }
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
         public void AddProduct(Product product)
         {
            
@@ -126,9 +157,5 @@ namespace BLL
             }
             return list_brand;
         }
-
-
-
-
     }
 }

@@ -1,0 +1,100 @@
+﻿<script>
+    // api url
+    const api_url =
+        " https://localhost:44393/api/Product/Index";
+    // Defining async function
+    async function getapi(url) {
+
+        // Storing response
+        const response = await fetch(url);
+
+        // Storing data in form of JSON
+        var data = await response.json();
+        console.log(data);
+        if (response) {
+            hideloader();
+        }
+        show(data);
+    }
+    // Calling that async function
+    getapi(api_url);
+
+    // Function to hide the loader
+    function hideloader() {
+        document.getElementById('loading').style.display = 'none';
+    }
+    // Function to define innerHTML for HTML table
+    function show(data) {
+        let tab =
+            `<tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Date</th>
+         </tr>`;
+
+        // Loop to access all rows
+        for (let r of data) {
+//            tab += `<tr>
+//    <td>${r.name} </td>
+//    <td>${r.price}</td>
+//    <td>${r.quantity}</td>
+//    <td>${r.created_Date}</td>
+//</tr>`;
+            tab += ` <div class="card">
+                <img src="img_avatar.png" alt="Avatar">
+                    <div class="container">
+                        <h4><b>${r.name}</b></h4>
+                        <p>${r.price}</p>
+                    </div>
+    </div>`;
+        }
+        // Setting innerHTML as tab variable
+        document.getElementById("employees").innerHTML = tab;
+    }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        <style >
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+    </style>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <!-- Here a loader is created which
+        loads till response comes -->
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border"
+             role="status" id="loading">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <h1>Registered Employees</h1>
+    <!-- table for showing data -->
+    <table ></table>
+    <!--card--> 
+    <h2 id="employees">Card</h2>
+
+    
+</body>
+</html>
+
