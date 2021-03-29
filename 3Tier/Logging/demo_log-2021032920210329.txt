@@ -1,0 +1,10 @@
+2021-03-29 09:38:40.180 +07:00 [INF] Hello, world!
+2021-03-29 09:38:44.582 +07:00 [DBG] Debuggingg
+2021-03-29 09:38:51.918 +07:00 [ERR] Could not find stored procedure 'Sp_SelectProduct1'.
+2021-03-29 09:39:50.145 +07:00 [INF] Hello, world!
+2021-03-29 09:39:50.181 +07:00 [DBG] Debuggingg
+2021-03-29 09:46:02.073 +07:00 [INF] Hello, world!
+2021-03-29 09:46:02.084 +07:00 [DBG] Debuggingg
+2021-03-29 10:04:38.383 +07:00 [INF] Hello, world!
+2021-03-29 10:04:38.417 +07:00 [DBG] Debuggingg
+2021-03-29 10:04:38.667 +07:00 [ERR] Could not find stored procedure 'Sp_SelectProduct123'.

@@ -34,6 +34,10 @@ namespace JWT_API
         {
             services.AddControllers();
 
+            
+
+            
+
             // For Entity Framework  
             services.AddDbContext<AuthenDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConnStr")));
 

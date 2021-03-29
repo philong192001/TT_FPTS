@@ -28,7 +28,7 @@
            </select>
         </div>      
         <div class="form-group">
-            <label  onmouseover="getAll.options();" for="input_id_brands">Brands</label>
+            <label  for="input_id_brands">Brands</label>
             <select id="brands" >
 
             </select>
@@ -87,13 +87,14 @@
                 });
             }
             var GetAllCategory = function () {
+                
                 let options_cate;
                 $.ajax({
                     url: 'https://localhost:44393/api/Category/GetAllCategory',
                     contentType: 'application/json',
                     success: function (res) {
                         list_category = res;
-                        
+
                         for (let category of list_category) {
                             options_cate += "<option value='" + category.id + "'>" + category.name + "</option>";
                         }
@@ -102,17 +103,20 @@
                         $('#categories').append(options_cate);
                     }
                 });
+                
             }
             var GetAllOptions = function () {
-                list_brand = GetAllBrand();
-                list_category = GetAllCategory();  
+               GetAllBrand();
+                GetAllCategory();  
               
             }                 
             return Options;
         }())
         var getAll = new getAllOptionsDemo();
 
-        
+        $(document).ready(function () {
+            getAll.options();
+        })
     </script>
 
 

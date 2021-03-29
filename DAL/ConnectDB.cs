@@ -1,10 +1,13 @@
 ﻿using DAL.Models;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using Serilog;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace DAL
 {
@@ -14,9 +17,13 @@ namespace DAL
         private readonly string _strConn;
         private const string __DEFAULT_CONN = "DB_3Tier";
         private readonly SqlConnection _sqlConnection;
+        private readonly ILogger<ConnectDB> _logger;
 
-        public ConnectDB(IConfiguration config)
+        public ConnectDB(IConfiguration config, ILogger<ConnectDB> logger)
         {
+           
+            _logger = logger;
+
             this.configuration = config;
             _strConn = configuration.GetConnectionString(__DEFAULT_CONN);
             _sqlConnection = new SqlConnection(_strConn);
@@ -24,24 +31,37 @@ namespace DAL
         //private const string __CONNECT = "Data Source=ADMIN;Initial Catalog=FPTS;Persist Security Info=True;User ID=sa;Password=123456;"; 
         public DataTable ReadProduct()
         {
+
+            //Log.Logger = new LoggerConfiguration()
+            //   .MinimumLevel.Debug()
+            //   .WriteTo.File("E://FPTS/3_Tier/3Tier/Logging/demo_log-20210329.txt", rollingInterval: RollingInterval.Day)
+            //   .CreateLogger();
+
+            //Log.Information("Hello, world!");
+
             DataTable dt = new DataTable();
 
             try
             {
+               // Log.Debug("Debuggingg");
                 if (ConnectionState.Closed == _sqlConnection.State)
                 {
                     _sqlConnection.Open();
                 }
-                SqlCommand cmd = new SqlCommand("Sp_SelectProduct", _sqlConnection);
+                SqlCommand cmd = new SqlCommand("Sp_SelectProduct123", _sqlConnection);
                 SqlDataReader rd = cmd.ExecuteReader();
                 dt.Load(rd);
             }
-            catch
+            catch(Exception e)
             {
-                throw;
+
+               // Log.Error(e.Message, "Something went wrong");
+                //_logger.LogWarning(e.Message);
+                throw ;
             }
             finally
             {
+                //Log.CloseAndFlush();
                 _sqlConnection.Close();
             }
             return dt;

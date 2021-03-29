@@ -20,6 +20,7 @@ namespace _3Tier.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("User access MainPage");
             return View();
         }
 

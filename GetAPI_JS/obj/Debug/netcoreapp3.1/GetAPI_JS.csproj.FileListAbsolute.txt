@@ -36,3 +36,4 @@ E:\FPTS\3_Tier\GetAPI_JS\obj\Debug\netcoreapp3.1\GetAPI_JS.genruntimeconfig.cach
 E:\FPTS\3_Tier\GetAPI_JS\obj\Debug\netcoreapp3.1\GetAPI_JS.csproj.CopyComplete
 E:\FPTS\3_Tier\GetAPI_JS\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Footer.cshtml.g.cs
 E:\FPTS\3_Tier\GetAPI_JS\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Header.cshtml.g.cs
+E:\FPTS\3_Tier\GetAPI_JS\obj\Debug\netcoreapp3.1\GetAPI_JS.csprojAssemblyReference.cache

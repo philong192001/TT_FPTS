@@ -1,0 +1,243 @@
+2021-03-29T08:34:47.2175236+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-29T08:34:47.2326189+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-29T08:34:47.2380965+07:00  [INF] Content root path: "E:\FPTS\3_Tier\3Tier" (b5d60022)
+2021-03-29T08:34:50.4429968+07:00 80000080-0001-fb00-b63f-84710c7967bb [INF] User access MainPage (f7748d0e)
+2021-03-29T08:35:25.6613911+07:00 80000050-0003-fc00-b63f-84710c7967bb [INF] User access MainPage (f7748d0e)
+2021-03-29T08:40:41.2870594+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-29T08:40:41.3042752+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-29T08:40:41.3070806+07:00  [INF] Content root path: "E:\FPTS\3_Tier\3Tier" (b5d60022)
+2021-03-29T08:40:41.4026671+07:00 80000043-0003-fd00-b63f-84710c7967bb [INF] User access MainPage (f7748d0e)
+2021-03-29T08:43:54.4199512+07:00 80000047-0002-fd00-b63f-84710c7967bb [WRN] ExecuteReader requires an open and available Connection. The connection's current state is connecting. (d4ae91ca)
+2021-03-29T08:44:03.6170462+07:00 80000047-0002-fd00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: ExecuteReader requires an open and available Connection. The connection's current state is connecting.
+   at BLL.ProductBLL.GetAllProduct() in E:\FPTS\3_Tier\BLL\ProductBLL.cs:line 59
+   at _3Tier.Controllers.ProductController.Index() in E:\FPTS\3_Tier\3Tier\Controllers\ProductController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-29T08:44:05.0375625+07:00 8000002a-0001-f800-b63f-84710c7967bb [WRN] Could not find stored procedure 'Sp_SelectProduct1'. (5fd8cfe2)
+2021-03-29T08:44:13.8469703+07:00 8000002a-0001-f800-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: Could not find stored procedure 'Sp_SelectProduct1'.
+   at BLL.ProductBLL.GetAllProduct() in E:\FPTS\3_Tier\BLL\ProductBLL.cs:line 59
+   at _3Tier.Controllers.ProductController.Index() in E:\FPTS\3_Tier\3Tier\Controllers\ProductController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-29T09:37:12.1730940+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-29T09:37:12.1928483+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-29T09:37:12.1961573+07:00  [INF] Content root path: "E:\FPTS\3_Tier\3Tier" (b5d60022)
+2021-03-29T09:37:12.3034626+07:00 8000002c-0001-f800-b63f-84710c7967bb [INF] User access MainPage (f7748d0e)
+2021-03-29T09:37:39.6015027+07:00 8000002f-0002-fa00-b63f-84710c7967bb [INF] User access MainPage (f7748d0e)
+2021-03-29T09:38:52.8412723+07:00 80000045-0003-fd00-b63f-84710c7967bb [WRN] Could not find stored procedure 'Sp_SelectProduct1'. (5fd8cfe2)
+2021-03-29T09:38:59.8940345+07:00 80000045-0003-fd00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: Could not find stored procedure 'Sp_SelectProduct1'.
+   at BLL.ProductBLL.GetAllProduct() in E:\FPTS\3_Tier\BLL\ProductBLL.cs:line 59
+   at _3Tier.Controllers.ProductController.Index() in E:\FPTS\3_Tier\3Tier\Controllers\ProductController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-29T09:39:39.1789939+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-29T09:39:39.1947078+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-29T09:39:39.1975006+07:00  [INF] Content root path: "E:\FPTS\3_Tier\3Tier" (b5d60022)
+2021-03-29T09:39:39.3363679+07:00 80000058-0003-fc00-b63f-84710c7967bb [INF] User access MainPage (f7748d0e)
+2021-03-29T09:53:57.9391450+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-29T09:53:57.9557890+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-29T09:53:57.9591884+07:00  [INF] Content root path: "E:\FPTS\3_Tier\3Tier" (b5d60022)
+2021-03-29T09:53:58.1127700+07:00 80000037-0001-f900-b63f-84710c7967bb [INF] User access MainPage (f7748d0e)
+2021-03-29T09:54:54.2620226+07:00 8000007e-0002-fc00-b63f-84710c7967bb [WRN] Could not find stored procedure 'Sp_SelectProduct123'. (9eb36331)
+2021-03-29T09:55:08.1974704+07:00 8000007e-0002-fc00-b63f-84710c7967bb [ERR] Could not find stored procedure 'Sp_SelectProduct123'. (9eb36331)
+2021-03-29T09:55:13.3045538+07:00 8000007e-0002-fc00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: Could not find stored procedure 'Sp_SelectProduct123'.
+   at BLL.ProductBLL.GetAllProduct() in E:\FPTS\3_Tier\BLL\ProductBLL.cs:line 64
+   at _3Tier.Controllers.ProductController.Index() in E:\FPTS\3_Tier\3Tier\Controllers\ProductController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-29T10:01:31.8136744+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-29T10:01:31.8297364+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-29T10:01:31.8338340+07:00  [INF] Content root path: "E:\FPTS\3_Tier\3Tier" (b5d60022)
+2021-03-29T10:01:31.9591249+07:00 8000005c-0003-fc00-b63f-84710c7967bb [INF] User access MainPage (f7748d0e)
+2021-03-29T10:01:45.5002993+07:00 8000003b-0001-f900-b63f-84710c7967bb [WRN] Could not find stored procedure 'Sp_SelectProduct123'. (9eb36331)
+2021-03-29T10:01:46.8902019+07:00 8000003b-0001-f900-b63f-84710c7967bb [ERR] Could not find stored procedure 'Sp_SelectProduct123'. (9eb36331)
+2021-03-29T10:01:48.6401683+07:00 8000003b-0001-f900-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: Could not find stored procedure 'Sp_SelectProduct123'.
+   at BLL.ProductBLL.GetAllProduct() in E:\FPTS\3_Tier\BLL\ProductBLL.cs:line 64
+   at _3Tier.Controllers.ProductController.Index() in E:\FPTS\3_Tier\3Tier\Controllers\ProductController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-29T10:04:29.6170289+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-29T10:04:29.6321997+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-29T10:04:29.6343321+07:00  [INF] Content root path: "E:\FPTS\3_Tier\3Tier" (b5d60022)
+2021-03-29T10:04:29.7338023+07:00 80000049-0002-fd00-b63f-84710c7967bb [INF] User access MainPage (f7748d0e)
+2021-03-29T10:04:45.4426544+07:00 8000003f-0001-f900-b63f-84710c7967bb [WRN] Could not find stored procedure 'Sp_SelectProduct123'. (9eb36331)
+2021-03-29T10:04:56.7545621+07:00 8000003f-0001-f900-b63f-84710c7967bb [ERR] Could not find stored procedure 'Sp_SelectProduct123'. (9eb36331)
+2021-03-29T10:04:59.0066290+07:00 8000003f-0001-f900-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: Could not find stored procedure 'Sp_SelectProduct123'.
+   at BLL.ProductBLL.GetAllProduct() in E:\FPTS\3_Tier\BLL\ProductBLL.cs:line 64
+   at _3Tier.Controllers.ProductController.Index() in E:\FPTS\3_Tier\3Tier\Controllers\ProductController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-29T10:09:45.2546462+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-29T10:09:45.2869986+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-29T10:09:45.2899697+07:00  [INF] Content root path: "E:\FPTS\3_Tier\3Tier" (b5d60022)
+2021-03-29T10:09:45.3846965+07:00 80000027-0000-f600-b63f-84710c7967bb [INF] User access MainPage (f7748d0e)
+2021-03-29T10:09:49.7276087+07:00 80000041-0001-f900-b63f-84710c7967bb [INF] User access List Product (ba0c1c21)
+2021-03-29T10:09:50.0393064+07:00 80000041-0001-f900-b63f-84710c7967bb [ERR] Could not find stored procedure 'Sp_SelectProduct123'. (9eb36331)
+2021-03-29T10:09:54.2995616+07:00 80000041-0001-f900-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: Could not find stored procedure 'Sp_SelectProduct123'.
+   at BLL.ProductBLL.GetAllProduct() in E:\FPTS\3_Tier\BLL\ProductBLL.cs:line 64
+   at _3Tier.Controllers.ProductController.Index() in E:\FPTS\3_Tier\3Tier\Controllers\ProductController.cs:line 31
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-29T11:30:43.1456025+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-29T11:30:43.1641823+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-29T11:30:43.1677037+07:00  [INF] Content root path: "E:\FPTS\3_Tier\3Tier" (b5d60022)
+2021-03-29T11:30:43.2681066+07:00 8000005f-0002-f900-b63f-84710c7967bb [INF] User access MainPage (f7748d0e)
+2021-03-29T11:30:46.6170608+07:00 80000016-0000-f500-b63f-84710c7967bb [INF] User access List Product (ba0c1c21)
+2021-03-29T11:30:47.2661432+07:00 80000016-0000-f500-b63f-84710c7967bb [ERR] Could not find stored procedure 'Sp_SelectProduct123'. (9eb36331)
+2021-03-29T11:30:51.3517256+07:00 80000016-0000-f500-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: Could not find stored procedure 'Sp_SelectProduct123'.
+   at BLL.ProductBLL.GetAllProduct() in E:\FPTS\3_Tier\BLL\ProductBLL.cs:line 65
+   at _3Tier.Controllers.ProductController.Index() in E:\FPTS\3_Tier\3Tier\Controllers\ProductController.cs:line 31
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

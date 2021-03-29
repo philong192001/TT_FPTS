@@ -51,8 +51,6 @@ E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Product\Delete.cshtml.g
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Product\Details.cshtml.g.cs
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
 E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
-E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.csproj.CoreCompileInputs.cache
-E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.MvcApplicationPartsAssemblyInfo.cache
 E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Brand\Index.cshtml.g.cs
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Brand\Create.cshtml.g.cs
@@ -64,3 +62,13 @@ E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Category\Delete.cshtml.
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Category\Details.cshtml.g.cs
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs
 E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
+E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\Serilog.dll
+E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.File.dll
+E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\Serilog.Sinks.Async.dll
+E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.csproj.CoreCompileInputs.cache
+E:\FPTS\3_Tier\3Tier\obj\Debug\netcoreapp3.1\3Tier.MvcApplicationPartsAssemblyInfo.cache
+E:\FPTS\3_Tier\3Tier\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll

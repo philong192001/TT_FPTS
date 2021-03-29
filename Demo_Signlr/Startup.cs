@@ -53,6 +53,7 @@ namespace Demo_Signlr
             {
                 endpoints.MapRazorPages();
                 endpoints.MapHub<ChatHub>("/chatHub");
+                endpoints.MapHub<PollHub>("/pollHub");
             });
         }
     }

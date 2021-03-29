@@ -36,3 +36,4 @@ E:\FPTS\3_Tier\Demo_Signlr\obj\Debug\netcoreapp3.1\Demo_Signlr.dll
 E:\FPTS\3_Tier\Demo_Signlr\obj\Debug\netcoreapp3.1\Demo_Signlr.pdb
 E:\FPTS\3_Tier\Demo_Signlr\obj\Debug\netcoreapp3.1\Demo_Signlr.genruntimeconfig.cache
 E:\FPTS\3_Tier\Demo_Signlr\obj\Debug\netcoreapp3.1\Demo_Signlr.csproj.CopyComplete
+E:\FPTS\3_Tier\Demo_Signlr\obj\Debug\netcoreapp3.1\Razor\Pages\Poll\Index.cshtml.g.cs

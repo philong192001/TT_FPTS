@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ReadApiCSharp.Models.PlaylistViewModel>
+
+<!DOCTYPE html>
+<html>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Color</th>
+                <th>Icon</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.playlist)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Color</td>
+                    <td><img src="@item.Icon" /> </td>
+                    
+                </tr>
+            }
+
+        </tbody>
+    </table>
+   
+</body>
+</html>

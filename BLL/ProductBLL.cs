@@ -1,6 +1,7 @@
 ﻿using DAL;
 using DAL.Models;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,8 +14,11 @@ namespace BLL
     public class ProductBLL
     {
         private readonly ConnectDB _connectDB;
-        public ProductBLL(ConnectDB connectDB)
+        private readonly ILogger<ProductBLL> _logger;
+
+        public ProductBLL(ConnectDB connectDB, ILogger<ProductBLL> logger)
         {
+            _logger = logger;
             _connectDB = connectDB;
         }
         public List<Product> GetAllProduct(){
@@ -55,7 +59,8 @@ namespace BLL
                 return products;
             }
             catch (Exception e )
-            {
+            {             
+                _logger.LogError(e.Message);
                 throw new Exception(e.Message);
             }
          

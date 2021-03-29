@@ -9,19 +9,24 @@ using BLL;
 using DAL;
 using DAL.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace _3Tier.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly ProductBLL _dB;      
-        public ProductController(ProductBLL db)
+        private readonly ProductBLL _dB;
+        private readonly ILogger<ProductController> _logger;
+
+        public ProductController(ProductBLL db,ILogger<ProductController> logger)
         {
+            _logger = logger;
             _dB = db;
            
         }         
         public IActionResult Index()
         {
+            _logger.LogInformation("User access List Product");
             List<Product> products = new List<Product>();
             products = _dB.GetAllProduct().ToList();
             return View(products);
